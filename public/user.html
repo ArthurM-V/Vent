@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script>
+      try {
+        const svTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", svTheme);
+        const svPalette = localStorage.getItem("palette") || "verde";
+        document.documentElement.setAttribute("data-palette", svPalette);
+      } catch {
+        console.warn("sem acesso ao local storage");
+      }
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Vent</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <div class="body">
+      <div class="user-cont">
+        <div class="user-sec">
+          <div class="user-menu">
+            <div class="profile-icon">
+              <div class="icon-container">
+                <img src="/img/profile.jpg" alt="Imagem de perfil" />
+              </div>
+            </div>
+            <div class="profile-nick">[%NOME%]</div>
+          </div>
+
+          <div class="config-menu">
+            <div class="in-sec">
+              <div class="cm-graph">
+                <h1>Estatísticas</h1>
+              </div>
+              <div class="cm-config">
+                <div class="fix">
+                  <span class="material-symbols-outlined"> settings </span>
+                  <h1>Configurações</h1>
+                </div>
+                <div class="drop-config">
+                  <div class="dc dc--1">
+                    <div class="fix">
+                      <h2>Adicionar categoria</h2>
+                      <span class="material-symbols-outlined"
+                        >arrow_drop_down</span
+                      >
+                    </div>
+                    <div class="dc-drop">
+                      <label for="cat-ttl">Nome da categoria:</label>
+                      <input type="text" id="cat-ttl" />
+                      <button id="add-cat">Salvar</button>
+                    </div>
+                  </div>
+                  <div class="dc dc--2"></div>
+                </div>
+              </div>
+              <div class="cm-exp">
+                <div class="th-board">
+                  <div class="th-up">
+                    <h1>Temas</h1>
+                    <span class="material-symbols-outlined"
+                      >arrow_drop_down</span
+                    >
+                  </div>
+                  <div class="th-drop">
+                    <h2>Plano de fundo</h2>
+                    <div class="td td--1">
+                      <label
+                        ><input
+                          type="radio"
+                          name="bg-color"
+                          value="light"
+                        />Claro</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          name="bg-color"
+                          value="dark"
+                        />Escuro</label
+                      >
+                    </div>
+                    <h2>Cor</h2>
+                    <div class="td td--2">
+                      <label
+                        ><input
+                          type="radio"
+                          name="theme-color"
+                          value="root"
+                        />Verde</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          name="theme-color"
+                          value="azul"
+                        />Azul</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          name="theme-color"
+                          value="vermelho"
+                        />Vermelho</label
+                      >
+                      <label
+                        ><input
+                          type="radio"
+                          name="theme-color"
+                          value="laranja"
+                        />Laranja</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="out-sec">
+              <div class="fix">
+                <span class="material-symbols-outlined"> logout </span>
+                <h1>Sair</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-sec">
+          <div class="tool-layout">
+            <div class="day-cont">
+              <div class="day-info">
+                <h1 id="date-week"></h1>
+                <h1 id="date-day"></h1>
+                <h1 id="date-month"></h1>
+                <h1 id="date-ano"></h1>
+              </div>
+            </div>
+            <div class="action-modal">
+              <div class="am-sec as--1">
+                <label for="act-title">Dê um título à sua atividade:</label>
+                <input
+                  type="text"
+                  name="title-act"
+                  id="act-title"
+                  maxlength="50"
+                />
+              </div>
+              <div class="am-sec as--2">
+                <label for="category">Adicione uma categoria:</label>
+                <select name="chs-category" id="category">
+                  <option value=""></option>
+                  <option value="No">Não</option>
+                </select>
+              </div>
+              <div class="am-sec as--3">
+                <textarea
+                  name="act-desc"
+                  id="act-desc"
+                  placeholder="Adicione uma anotação"
+                  maxlength="144"
+                ></textarea>
+              </div>
+              <div class="am-sec as--4">
+                <div class="act-emo">
+                  <label>
+                    <input type="radio" name="emoji-check" value="sad" />
+                    <img src="/img/sad.png" alt="Triste" />
+                  </label>
+
+                  <label>
+                    <input type="radio" name="emoji-check" value="tired" />
+                    <img src="/img/tired.png" alt="Cansado" />
+                  </label>
+
+                  <label>
+                    <input type="radio" name="emoji-check" value="neutral" />
+                    <img src="/img/neutral.png" alt="Neutro" />
+                  </label>
+
+                  <label>
+                    <input type="radio" name="emoji-check" value="smile" />
+                    <img src="/img/smile.png" alt="Animado" />
+                  </label>
+
+                  <label>
+                    <input type="radio" name="emoji-check" value="happy" />
+                    <img src="/img/happy.png" alt="Feliz" />
+                  </label>
+                </div>
+              </div>
+              <div class="am-sec as--5">
+                <button id="create-btn">Adicionar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="border"></div>
+
+          <div class="daily-cont">
+            <div class="daily-board"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="graph-cont">
+      <div class="graph-header">
+        <div class="gh gh--1">
+          <h1>Estatísticas</h1>
+        </div>
+        <div class="gh gh--2">
+          <button id="close-stats">X</button>
+        </div>
+      </div>
+      <div class="graph-body">
+        <div class="graph-sec">
+          <canvas id="grafico"></canvas>
+          <div class="graph-warn hidden">
+            <h1>Nenhuma atividade encontrada.</h1>
+          </div>
+        </div>
+        <div class="graph-subttl">
+          <div class="gs gs--1">
+            <h1 id="reg-act">Atividades registradas hoje: 0</h1>
+          </div>
+          <div class="gs gs--2">
+            <h1 id="avg-act">Humor mais comum durante o dia:</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="routine.js"></script>
+  </body>
+</html>
