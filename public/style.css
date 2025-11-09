@@ -636,6 +636,7 @@ footer {
   max-height: 0;
   padding: 0;
   background: var(--primary-color-bg);
+  color: var(--font-color-tl);
   overflow: hidden;
   transition: max-height 0.2s;
 }
@@ -649,9 +650,13 @@ footer {
   padding: 0.2rem 0.3rem;
 }
 
+.dc-drop {
+  font-size: 1.6rem;
+}
+
 .dc-drop.th-active {
   padding: 0.35rem;
-  max-height: 5vh;
+  max-height: 15vh;
 }
 
 .in-sec {
@@ -1162,7 +1167,7 @@ footer {
   left: 0;
   text-align: center;
   font-size: 1.8rem;
-  color: var(--font-color-am);
+  color: var(--font-color-tl);
 }
 
 .graph-subttl {
@@ -1298,9 +1303,19 @@ footer {
     overflow: hidden;
   }
 
+  .as--4 {
+    padding: 0.25rem;
+  }
+
   .icon-container {
-    width: 12vw;
+    width: 15vw;
     height: 8vh;
+  }
+
+  #create-btn {
+    width: 10rem;
+    height: 4rem;
+    overflow: hidden;
   }
 
   .profile-nick {
@@ -1361,11 +1376,47 @@ footer {
   .tool-sec {
     width: 100%;
     height: 100%;
+    padding: 0.5rem;
+  }
+
+  .action-modal {
+    padding: 0.3rem;
+  }
+
+  .act-desc {
+    overflow: hidden;
+    max-width: 65vw;
+    max-height: 30vh;
+  }
+
+  .act-emo {
+    gap: 5px;
   }
 
   .graph-cont {
     width: 85vw;
-    height: 70vh;
+    min-height: 70vh;
     overflow: hidden;
+  }
+
+  .graph-header {
+    min-height: 3vh;
+    padding: 0.75rem;
+  }
+
+  .graph-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .graph-body {
+    height: 67vh;
+  }
+
+  .graph-sec {
+    height: 40vh;
+  }
+
+  .graph-subttl {
+    height: 22vh;
   }
 }

@@ -20,6 +20,9 @@ const thDrop = document.querySelector(".th-drop");
 
 const dcDrop = document.querySelector("cm-config");
 
+const catTtl = document.getElementById("cat-ttl");
+const addCat = document.getElementById("add-cat");
+
 const dayTxt = document.getElementById("date-day");
 
 const dailyBrd = document.querySelector(".daily-board");
@@ -152,6 +155,20 @@ function disappear(element) {
 
 // === SISTEMA DE ROTINAS ===
 
+function addCategory() {
+  if (!catTtl.value) {
+    alert("Para adicionar uma categoria, adicione um título primeiro!");
+  }
+
+  const newCat = document.createElement("div");
+
+  newCat.innerHTML = `<option value="${catTtl.value}">${catTtl.value}</option>`;
+
+  actCat.append(newCat);
+
+  catTtl.value = "";
+}
+
 function createActv() {
   const actEmo = document.querySelector('input[name="emoji-check"]:checked');
 
@@ -270,6 +287,8 @@ window.addEventListener("load", () => {
     });
   });
 });
+
+addCat.addEventListener("click", addCategory);
 
 // === GRÁFICOS ===
 
