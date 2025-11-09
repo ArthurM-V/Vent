@@ -97,7 +97,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  padding: 4rem 1.5rem;
+  padding: 4rem 2.5rem;
   transition: background 0.2s;
 }
 
@@ -197,6 +197,7 @@ ul a:active {
   align-items: center;
   justify-content: space-evenly;
   color: var(--primary-color-bg);
+  overflow: hidden;
 }
 
 .hs--1 {
@@ -361,6 +362,7 @@ main {
   overflow: hidden;
   text-align: center;
 }
+
 .act-call h1 {
   font-size: 4rem;
 }
@@ -390,12 +392,20 @@ main {
   flex-direction: column;
   align-items: start;
   justify-content: space-evenly;
+  gap: 1rem;
 }
 
 .cd {
+  text-align: left;
+  width: 100%;
   height: 4vh;
   padding: 1.2rem;
   font-size: 2rem;
+}
+
+.cd input {
+  width: 75%;
+  height: 2.5rem;
 }
 
 .cd h3 {
@@ -419,7 +429,7 @@ main {
 }
 
 #create-acc {
-  width: 10rem;
+  width: 15rem;
   height: 3rem;
   cursor: pointer;
   font-size: 1.5rem;
@@ -1290,12 +1300,107 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  nav {
+    padding: 1rem;
+  }
+
+  .scroll {
+    padding: 0.75rem;
+    font-size: 1.2rem;
+  }
+
+  #head {
+    font-size: 3rem;
+  }
+
+  .scroll #head {
+    font-size: 2.5rem;
+  }
+
+  .scroll ul a {
+    font-size: 1.6rem;
+  }
+
+  ul {
+    font-size: 1.6rem;
+    gap: 0.75rem;
+  }
+
+  .nav-menu button {
+    width: 7rem;
+    height: 3rem;
+  }
+
+  .hs--1 {
+    font-size: 1.8rem;
+  }
+
+  .hs--2 {
+    font-size: 1.65rem;
+  }
+
   .exp-card p {
     font-size: 2rem;
   }
 
   .exp-cont h2 {
     font-size: 2.4rem;
+  }
+
+  .act-call {
+    width: 90vw;
+    height: 65vh;
+    flex-wrap: wrap;
+  }
+
+  .call-txt {
+    height: 20vh;
+    padding: 2rem;
+  }
+
+  .call-txt h1 {
+    font-size: 2.25rem;
+  }
+
+  .call-txt h2 {
+    font-size: 2rem;
+  }
+
+  .cad-sec {
+    height: 45vh;
+  }
+
+  .cd {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cd input {
+    width: 30rem;
+    height: 3rem;
+  }
+
+  .cd--1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .log-cont {
+    width: 85vw;
+  }
+
+  .lc--3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   .user-cont {
