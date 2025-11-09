@@ -1589,6 +1589,14 @@ footer {
     height: 2.8rem;
   }
 
+  .exp-card p {
+    font-size: 1.8rem;
+  }
+
+  .exp-cont h2 {
+    font-size: 2rem;
+  }
+
   .call-txt h1 {
     font-size: 2rem;
   }
