@@ -9,6 +9,12 @@ const graph = document.getElementById("grafico");
 const overlay = document.querySelector(".overlay");
 const scrGraph = document.querySelector(".graph-cont");
 const closeStats = document.getElementById("close-stats");
+
+const dcTouch = document.querySelector(".dc-up");
+const dcDown = document.querySelector(".drop-config");
+const catUp = document.querySelector(".cat-up");
+const catDrop = document.querySelector(".dc-drop");
+
 const thUp = document.querySelector(".th-up");
 const thDrop = document.querySelector(".th-drop");
 
@@ -74,6 +80,28 @@ themeRadio.forEach((radio) => {
 });
 
 // === ROTAÇÃO DO ÍCONE DE TEMAS ===
+dcTouch.addEventListener("click", () => {
+  console.log("click!");
+  if (dcDown.classList.contains("th-active")) {
+    dcDown.classList.remove("th-active");
+    document.querySelector(".dc-up span").style.transform = "rotate(0deg)";
+  } else {
+    dcDown.classList.add("th-active");
+    document.querySelector(".dc-up span").style.transform = "rotate(90deg)";
+  }
+});
+
+catUp.addEventListener("click", () => {
+  console.log("click!");
+  if (catDrop.classList.contains("th-active")) {
+    catDrop.classList.remove("th-active");
+    document.querySelector(".cat-up span").style.transform = "rotate(0deg)";
+  } else {
+    catDrop.classList.add("th-active");
+    document.querySelector(".cat-up span").style.transform = "rotate(180deg)";
+  }
+});
+
 thUp.addEventListener("click", () => {
   console.log("click!");
   if (thDrop.classList.contains("th-active")) {
