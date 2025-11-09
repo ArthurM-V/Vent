@@ -1395,6 +1395,21 @@ footer {
     width: 85vw;
   }
 
+  .il {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  #validate-user {
+    width: 35rem;
+  }
+
+  #validate-pass {
+    width: 25rem;
+  }
+
   .lc--3 {
     width: 100%;
     display: flex;
@@ -1548,5 +1563,93 @@ footer {
 
   .graph-subttl {
     height: 22vh;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  nav {
+    padding: 0.75rem;
+  }
+
+  #head {
+    font-size: 2.6rem;
+  }
+
+  .scroll #head {
+    font-size: 2.2rem;
+  }
+
+  ul {
+    font-size: 1.4rem;
+    gap: 0.5rem;
+  }
+
+  .nav-menu button {
+    width: 6rem;
+    height: 2.8rem;
+  }
+
+  .call-txt h1 {
+    font-size: 2rem;
+  }
+
+  .call-txt h2 {
+    font-size: 1.8rem;
+  }
+
+  .cd input {
+    width: 24rem;
+    height: 2.8rem;
+  }
+
+  #validate-user {
+    width: 28rem;
+  }
+
+  #validate-pass {
+    width: 20rem;
+  }
+
+  .graph-cont {
+    width: 90vw;
+    min-height: 60vh;
+  }
+
+  .graph-header h1 {
+    font-size: 2rem;
+  }
+
+  .graph-sec {
+    height: 35vh;
+  }
+
+  .graph-subttl {
+    height: 20vh;
+  }
+
+  .icon-container {
+    width: 18vw;
+    height: 7vh;
+  }
+
+  .cm {
+    width: 18vw;
+  }
+
+  .drop-config {
+    width: 60vw;
+  }
+
+  .th-drop {
+    width: 55vw;
+  }
+
+  .act-desc {
+    max-width: 80vw;
+    max-height: 25vh;
+  }
+
+  .act-emo {
+    gap: 3px;
   }
 }
